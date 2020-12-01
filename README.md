@@ -22,21 +22,30 @@ int main()
 WAP to swap the first and last digits of a number
 
 #include <stdio.h>
+#include <math.h>
 
 int main()
 {
-    int num , i;
-    printf("enter a number");
-    scanf ("%d" , &num );
-    for (i=1 ; num>10 ; i++)
-    {   
+    int num , firstd, lastd , swapped , n , i;
+    printf("enter number");
+    scanf ("%d" , &num);
+    lastd = num%10;
+    n = num;
+    for (i=0 ; num >10 ; i++)
+    {
         num = num/10;
     }
-    printf ("the number of digits are %d" , i);
-        
+    firstd = num;
+    
+    swapped = n - firstd * pow (10 , i) + lastd * pow (10,i);
+    
+    swapped = swapped - lastd + firstd;
+    
+    printf ("swapped no. is %d" , swapped);
 
     return 0;
 }
+
 
 WAP to find frequency of each digit in a no.
 #include <stdio.h>
@@ -115,5 +124,22 @@ int main()
 }
 
 WAP to print all ASCII values with their characters
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    char c;
+    for (i=0 ; i<256 ; i++)
+    {
+        printf("%c" , c);
+        c++;
+    }
+    
+
+    return 0;
+}
+
+WAP to find one's complement of a binary number
 
 
