@@ -1,4 +1,4 @@
-# COMPUTER ASSIGNMENT
+# COMPUTER ASSIGNMENT part 1
 
 WAP to count no. of digits in a number
 
