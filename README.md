@@ -142,4 +142,217 @@ int main()
 
 WAP to find one's complement of a binary number
 
+#include <stdio.h>
 
+int main()
+{
+    char binary[10], onesComp[10];
+    int i;
+
+    printf("Enter binary value: ");
+    
+    gets(binary);
+
+    for(i=0; i<10; i++)
+    {
+        if(binary[i] == '1')
+        {
+            onesComp[i] = '0';
+        }
+        else if(binary[i] == '0')
+        {
+            onesComp[i] = '1';
+        }
+        
+    }
+
+    
+        printf("One's complement = %s", onesComp);
+
+    return 0;
+}
+
+WAP to find two's complement of a binary number
+
+#include <stdio.h>
+
+int main()
+{
+    char binary[10], onesComp[10] , twosComp [10];
+    int i , j=1;
+
+    printf("Enter binary value: ");
+    
+    gets(binary);
+
+    for(i=0; i<10; i++)
+    {
+        if(binary[i] == '1')
+        {
+            onesComp[i] = '0';
+        }
+        else if(binary[i] == '0')
+        {
+            onesComp[i] = '1';
+        }
+        
+    }
+    for(int i=9; i>=0; i--)  
+    {  
+        if(onesComp[i] == '1' && j == 1)  
+        {  
+            twosComp[i] = '0';  
+        }  
+        else if(onesComp[i] == '0' && j == 1)  
+        {  
+            twosComp[i] = '1';  
+            j = 0;  
+        }  
+        else  
+        {  
+            twosComp[i] = onesComp[i];  
+        }  
+    }  
+
+   
+    
+        printf("Two's complement is = %s", twosComp);
+
+    return 0;
+}
+
+WAP to convert binary to octal , hexa decimal and decimal number
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int binary, octal , decimal=0 , rem , i=0, spare, decimal2 , hexadecimal = 0 ;
+    printf("enter binary number");
+    scanf ("%d" , &binary);
+    
+    while (binary !=0)
+    {
+        rem = binary %10;
+        spare = rem * pow (2 , i);
+        decimal += spare;
+        binary = binary / 10;
+        i++;
+    }
+    printf ("decimal is %d \n" , decimal);
+    rem = 0;
+    i = 0;
+    decimal2 = decimal;
+    while (decimal != 0)
+    { 
+        rem = (decimal%8) * pow (10 , i);
+        octal += rem;
+        decimal = decimal /8;
+        i++;
+    }
+    printf ("octal number is %d \n" , octal );
+    
+    rem = 0;
+    i = 0;
+    while (decimal2 != 0)
+    { 
+        rem = (decimal2 % 16) * pow (10 , i);
+        hexadecimal += rem;
+        decimal2 = decimal2 /16;
+        i++;
+    }
+    printf ("hexadecimal number is %d" , hexadecimal );
+
+    return 0;
+}
+
+WAP to convert octal to binary , decimal and hexadecimal number
+
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int binary = 0, octal , decimal=0 , rem , i=0, spare, decimal2 , hexadecimal = 0 ;
+    printf("enter octal number");
+    scanf ("%d" , &octal);
+    
+    while (octal !=0)
+    {
+        rem = octal %10;
+        spare = rem * pow (8 , i);
+        decimal += spare;
+        octal = octal / 10;
+        i++;
+    }
+    printf ("decimal is %d \n" , decimal);
+    rem = 0;
+    i = 0;
+    decimal2 = decimal;
+    while (decimal != 0)
+    { 
+        rem = (decimal%2) * pow (10 , i);
+        binary += rem;
+        decimal = decimal /2;
+        i++;
+    }
+    printf ("binary number is %d \n" , binary );
+    
+    rem = 0;
+    i = 0;
+    while (decimal2 != 0)
+    { 
+        rem = (decimal2 % 16) * pow (10 , i);
+        hexadecimal += rem;
+        decimal2 = decimal2 /16;
+        i++;
+    }
+    printf ("hexadecimal number is %d" , hexadecimal );
+
+    return 0;
+}
+
+
+WAP to convert hexadecimal to binary , decimal and octal number
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int binary = 0, octal=0 , decimal=0 , rem , i=0, spare, decimal2 , hexadecimal;
+    printf("enter hexadecimal number");
+    scanf ("%d" , &hexadecimal);
+    
+    while (hexadecimal !=0)
+    {
+        rem = hexadecimal %10;
+        spare = rem * pow (16 , i);
+        decimal += spare;
+        hexadecimal = hexadecimal / 10;
+        i++;
+    }
+    printf ("decimal is %d \n" , decimal);
+    rem = 0;
+    i = 0;
+    decimal2 = decimal;
+    while (decimal != 0)
+    { 
+        rem = (decimal%2) * pow (10 , i);
+        binary += rem;
+        decimal = decimal /2;
+        i++;
+    }
+    printf ("binary number is %d \n" , binary );
+    
+    rem = 0;
+    i = 0;
+    while (decimal2 != 0)
+    { 
+        rem = (decimal2 % 8) * pow (10 , i);
+        octal += rem;
+        decimal2 = decimal2 /8;
+        i++;
+    }
+    printf ("octal number is %d" , octal );
+
+    return 0;
+}
