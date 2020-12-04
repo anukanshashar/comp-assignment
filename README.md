@@ -33,3 +33,28 @@ WAP to convert octal to binary , decimal and hexadecimal number
 WAP to convert hexadecimal to binary , decimal and octal number
 
 
+Q1 PYRAMID STAR PATTERN
+
+
+
+
+Q2 HOLLOW PYRAMID STAR PATTERN
+
+
+
+Q3. INVERTED PYRAMID STAR PATTERN
+
+
+
+Q4 HOLLOW INVERTED PYRAMID STAR PATTERN
+
+
+
+Q5 HALF DIAMOND STAR PATTERN
+
+
+
+
+Q6 MIRRORED HALF DIAMOND STAR PATTERN
+
+
