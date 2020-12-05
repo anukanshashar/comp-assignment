@@ -1,36 +1,36 @@
-# COMPUTER ASSIGNMENT part 1
+# COMPUTER ASSIGNMENT 
 
-WAP to count no. of digits in a number
-
-
-
-WAP to swap the first and last digits of a number
+WAP to count no. of digits in a number - by divinding a number by ten repeatedly and using a for loop, we can calculate number of digits
 
 
 
-WAP to find frequency of each digit in a no.
-
-
-WAP to enter a number and print it in words
-
-
-WAP to print all ASCII values with their characters
-
-WAP to find one's complement of a binary number
+WAP to swap the first and last digits of a number - first obtain first and last digit by using for loop , also count number of digits. then swap using 10*place value
 
 
 
-WAP to find two's complement of a binary number
+WAP to find frequency of each digit in a no. - by using for loop
 
 
-WAP to convert binary to octal , hexa decimal and decimal number
+WAP to enter a number and print it in words - first reverse the number and use switch case statements
 
 
-WAP to convert octal to binary , decimal and hexadecimal number
+WAP to print all ASCII values with their characters - use %d to %c
+
+WAP to find one's complement of a binary number - use for loop
 
 
 
-WAP to convert hexadecimal to binary , decimal and octal number
+WAP to find two's complement of a binary number - first find one's complement then use if...else for- loop conditions
+
+
+WAP to convert binary to octal , hexa decimal and decimal number - first convert to decimal then find other number systems
+
+
+WAP to convert octal to binary , decimal and hexadecimal number - first convert to decimal then find other number systems
+
+
+
+WAP to convert hexadecimal to binary , decimal and octal number - first convert to decimal then find other number systems
 
 
 Q1 PYRAMID STAR PATTERN
