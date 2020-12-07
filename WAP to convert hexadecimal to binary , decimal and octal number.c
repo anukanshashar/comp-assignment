@@ -2,20 +2,37 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <string.h>  
 int main()
 {
-    int binary = 0, octal=0 , decimal=0 , rem , i=0, spare, decimal2 , hexadecimal;
+     char hex[17];  
+     long long decimal=0;
+    int binary = 0, octal=0  , rem , i=0, spare, decimal2 , hexadecimal , j=0;
     printf("enter hexadecimal number");
-    scanf ("%d" , &hexadecimal);
-    
-    while (hexadecimal !=0)
+    gets(hex);
+    int len = strlen(hex);
+    len--;
+  for(j=0; hex[j]!='\0'; j++)
     {
-        rem = hexadecimal %10;
-        spare = rem * pow (16 , i);
-        decimal += spare;
-        hexadecimal = hexadecimal / 10;
-        i++;
+
+        if(hex[j]>='0' && hex[j]<='9')
+        {
+            rem = hex[j] - 48;
+        }
+        else if(hex[j]>='a' && hex[j]<='f')
+        {
+            rem = hex[j] - 97 + 10;
+        }
+        else if(hex[j]>='A' && hex[j]<='F')
+        {
+            rem = hex[j] - 65 + 10;
+        }
+
+        decimal += rem * pow(16, len);
+        len--;
     }
+    
+  
     printf ("decimal is %d \n" , decimal);
     rem = 0;
     i = 0;
